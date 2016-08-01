@@ -12,5 +12,11 @@
         "php": "^7.0",
         "laravel/framework": ">=5.0.0",
         "uploadcare/uploadcare-php": "^1.5"
-    }
+    },
+    "autoload": {
+        "psr-4": {
+            "PedZed\\LaravelUploadcare\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
 }
