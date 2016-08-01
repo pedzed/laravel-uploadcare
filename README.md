@@ -10,10 +10,13 @@ This is a simple Laravel service provider for [Uploadcare's official PHP library
 
 ## Installation
 1. Run `composer require pedzed/laravel-uploadcare`
-1. Add this line to the `providers` array of `config/app.php`:
-    ```php
+1. Add this line to the `providers` array of `config/app.php`:  
+    ```
     PedZed\LaravelUploadcare\UploadcareServiceProvider::class,
     ```
+1. Run `php artisan vendor:publish`
+1. Add `UPLOADCARE_PUBLIC_KEY` and `UPLOADCARE_PRIVATE_KEY` to your environment variables.
+    You can get the values from https://uploadcare.com/dashboard.
 1. Call the [`Uploadcare\Api`]() class through `app()->uploadcare`.
 
 

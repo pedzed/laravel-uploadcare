@@ -8,20 +8,31 @@ use Uploadcare\Api as Uploadcare;
 class UploadcareServiceProvider extends ServiceProvider
 {
     /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = true;
-
-    /**
      * Bootstrap the application services.
      *
      * @return void
      */
     public function boot()
     {
-        //
+        $this->setupConfig();
+    }
+
+    /**
+     * Setup the config.
+     *
+     * @return void
+     */
+    protected function setupConfig()
+    {
+        $configFile = dirname(__DIR__).'/config/uploadcare.php';
+
+        if($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
+            $this->publishes([$configFile => config_path('uploadcare.php')]);
+        } elseif($this->app instanceof LumenApplication) {
+            $this->app->configure('uploadcare');
+        }
+
+        $this->mergeConfigFrom($configFile, 'uploadcare');
     }
 
     /**
