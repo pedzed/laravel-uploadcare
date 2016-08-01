@@ -1,0 +1,15 @@
+{
+    "name": "pedzed/laravel-uploadcare",
+    "description": "Uploadcare for Laravel.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "pedzed",
+            "email": "pedzed@outlook.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "uploadcare/uploadcare-php": "^1.5"
+    }
+}
