@@ -2,6 +2,30 @@
 
 This is a simple Laravel service provider for [Uploadcare's official PHP library](https://github.com/uploadcare/uploadcare-php).
 
+
+## Prerequisites
+- Laravel 5
+- PHP 7.0 or higher
+
+
+## Installation
+1. Run `composer require pedzed/laravel-uploadcare`
+1. Add this line to the `providers` array of `config/app.php`:
+    ```php
+    PedZed\LaravelUploadcare\UploadcareServiceProvider::class,
+    ```
+1. Call the [`Uploadcare\Api`]() class through `app()->uploadcare`.
+
+
+## Usage
+For the usage, please check Uploadcare's API: https://github.com/uploadcare/uploadcare-php#readme.
+
+### Examples
+```php
+{!! app()->uploadcare->widget->getScriptTag() !!}
+```
+
+
 ## License
 The MIT License (MIT)
 
