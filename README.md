@@ -17,7 +17,7 @@ This is a simple Laravel service provider for [Uploadcare's official PHP library
 1. Run `php artisan vendor:publish`
 1. Add `UPLOADCARE_PUBLIC_KEY` and `UPLOADCARE_PRIVATE_KEY` to your environment variables.
     You can get the values from https://uploadcare.com/dashboard.
-1. Call the [`Uploadcare\Api`]() class through `app()->uploadcare`.
+1. Call the [`Uploadcare\Api`](https://github.com/uploadcare/uploadcare-php/blob/master/src/Uploadcare/Api.php) class through `app()->uploadcare`.
 
 
 ## Usage
