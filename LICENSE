@@ -1,8 +1,3 @@
-# Uploadcare for Laravel
-
-This is a simple Laravel service provider for [Uploadcare's official PHP library](https://github.com/uploadcare/uploadcare-php).
-
-## License
 The MIT License (MIT)
 
 Copyright (c) 2016 pedzed
