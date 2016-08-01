@@ -26,11 +26,9 @@ class UploadcareServiceProvider extends ServiceProvider
     {
         $configFile = dirname(__DIR__).'/config/uploadcare.php';
 
-        if($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
-            $this->publishes([$configFile => config_path('uploadcare.php')]);
-        } elseif($this->app instanceof LumenApplication) {
-            $this->app->configure('uploadcare');
-        }
+        $this->publishes([
+            $configFile => config_path('uploadcare.php'),
+        ]);
 
         $this->mergeConfigFrom($configFile, 'uploadcare');
     }
