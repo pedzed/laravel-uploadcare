@@ -25,6 +25,8 @@ For the usage, please check Uploadcare's API: https://github.com/uploadcare/uplo
 
 ### Examples
 ```php
+{!! app()->uploadcare->widget->getInputTag('file_id') !!}
+
 {!! app()->uploadcare->widget->getScriptTag() !!}
 ```
 
