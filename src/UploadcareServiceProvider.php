@@ -40,7 +40,7 @@ class UploadcareServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('uploadcare', function() {
+        $this->app->singleton('uploadcare', function () {
             $publicKey = config('uploadcare.public_key');
             $privateKey = config('uploadcare.private_key');
 
@@ -53,7 +53,7 @@ class UploadcareServiceProvider extends ServiceProvider
     *
     * @return array
     */
-    public function provides() : array
+    public function provides()
     {
         return [
             Uploadcare::class,
